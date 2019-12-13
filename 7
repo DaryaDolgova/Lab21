@@ -1,0 +1,33 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+
+using namespace std;
+
+int main()
+
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	string S;
+
+	int   i;
+
+	cout << "S=";
+	getline(cin, S);
+
+
+	for ( i = 0; i < S.size(); i++) 
+	{
+		if (i % 2 == 1) { cout << S[i]; }
+	}
+
+	for (i = S.size()-1; i >= 0; i--) 
+	{
+		if (i % 2 == 0) { cout << S[i]; }
+	}
+
+	return 0;
+}
