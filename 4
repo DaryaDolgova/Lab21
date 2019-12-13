@@ -1,0 +1,26 @@
+using namespace std;
+
+#include <string>
+#include <windows.h>
+#include <iostream>
+
+int main() 
+{
+	string s;
+	int z, i;
+	z = 0;
+
+	cout << "S=";
+	getline(cin, s);
+
+	for (i = 0; i < s.size(); i++) 
+	{
+		if (s[i] == 'а' || s[i] == 'о' || s[i] == 'и' || s[i] == 'е' || s[i] == 'ё' || s[i] == 'э' || s[i] == 'ы' || s[i] == 'у' || s[i] == 'ю' || s[i] == 'я') {
+			z++;
+		}
+
+	cout << z << endl;
+
+	return 0;
+
+}
