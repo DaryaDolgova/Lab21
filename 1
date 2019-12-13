@@ -1,0 +1,39 @@
+using namespace std;
+
+#include <string>
+#include <iostream>
+
+
+int main() 
+{
+	string S;
+
+	int x,n,i;
+	x=0;
+	n = 0;
+	i = 0;
+	
+	cout << "S= ";
+	getline(cin, S);
+
+	while (S[i] != '\0'&&S[i] == ' ' )
+	{
+	i++;
+	x = 0;
+	while (S[i] != '\0') 
+	{
+		if (x == 0&&S[i] != ' ' )
+		{
+			x = 1;
+			n++;
+		}
+		else if (S[i] == ' ')
+			x = 0;
+		i++;
+	}
+	}
+
+	cout << n << endl;
+
+	return 0;
+}
