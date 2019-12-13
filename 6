@@ -1,0 +1,38 @@
+#include <iostream>
+#include <windows.h>
+#include <string>
+
+using namespace std;
+
+int main()
+
+{
+	setlocale(LC_ALL, "Russian");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	string S;
+
+	int  x, i;
+
+	cout << "S=";
+	getline(cin, S);
+	x = 0;
+	for (i = 0; i < S.size(); i++) 
+	{
+		if (S[i] == 92) { x++; }
+	}
+
+	if (x == 1) 
+	{
+		for (i = S.find_first_of(92) + 1; i < S.find_last_of('.'); i++) 
+		{ cout << S[i]; }
+	}
+
+	else if (x != 1) {
+
+		for (i = S.find_last_of(92, S.find_last_of(92) - 1) + 1; i < S.find_last_of(92); i++) { cout << S[i];  }
+
+     }
+	return 0;
+}
